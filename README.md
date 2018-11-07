@@ -18,6 +18,7 @@ This is what you can do. I assume you have docker and git installed on your loca
 
 ```bash
 git clone https://github.com/ConnectingApps/ShowOrchestration.git
+cd ShowOrchestration
 cd app
 docker build -t showorch .
 docker run -p 5004:5000 showorch
@@ -38,9 +39,10 @@ I assume you have kubernetes running and some environment to deploy to (this can
 
 ```bash
 git clone https://github.com/ConnectingApps/ShowOrchestration.git
+cd ShowOrchestration
 cd app
-kubectl -f dep.yml
-kubectl -f service.yml
+kubectl create -f dep.yml
+kubectl create -f service.yml
 ```
 
 For minikube users:
