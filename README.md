@@ -17,7 +17,7 @@ Just docker will help you if you do not want orchestration. Just build the image
 This is what you can do. I assume you have docker and git installed on your local machine.
 
 ```bash
-git clone https://github.com/DaanAcohen/ShowOrchestration.git
+git clone https://github.com/ConnectingApps/ShowOrchestration.git
 cd app
 docker build -t showorch .
 docker run -p 5004:5000 showorch
@@ -34,10 +34,10 @@ In addition, a kubernetes service is created as well. This is to help us accessi
 
 I assume you have kubernetes running and some environment to deploy to (this can be just minikube running locally). We recommend [minkube 0.27](https://github.com/kubernetes/minikube/releases/tag/v0.27.0) because of its stability. First you should install Kubernetes. We recommend doing that by changing you docker settings and apply them as shown below.
 
-![image](https://raw.githubusercontent.com/DaanAcohen/ShowOrchestration/master/InstallKubernetes.png)
+![image](https://raw.githubusercontent.com/ConnectingApps/ShowOrchestration/master/InstallKubernetes.png)
 
 ```bash
-git clone https://github.com/DaanAcohen/ShowOrchestration.git
+git clone https://github.com/ConnectingApps/ShowOrchestration.git
 cd app
 kubectl -f dep.yml
 kubectl -f service.yml
@@ -60,6 +60,6 @@ http://192.168.0.111:30002/
 
 You are now running a microservice without depending on a single docker file.
 
-![image](https://raw.githubusercontent.com/DaanAcohen/ShowOrchestration/master/KubernetesOverview.png)
+![image](https://raw.githubusercontent.com/ConnectingApps/ShowOrchestration/master/KubernetesOverview.png)
 
 
