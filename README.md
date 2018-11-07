@@ -1,5 +1,11 @@
 # ShowOrchestration
 
+# Table of contents
+
+  - [Introduction](#introduction)
+  - [Just Docker, No Kubernetes](#just-docker-no-kubernetes)
+  - [Kubernetes](#kubernetes)
+
 ## Introduction
 
 This is a project to show Kubernetes orchestration. Kubernetes is an orchestrator. If you just want to run microservice applications in a docker container, you do not need it but if you continue reading you will find out why you probably do need it anyway.  
