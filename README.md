@@ -33,7 +33,7 @@ Now you have the application running. If the container crashes or gets too many 
 
 In addition, a kubernetes service is created as well. This is to help us accessing our microservice from the outside world. A service file has labels that are also used in the deployment file to show the relation. Moreover, the service file has an inner port (port) used by the microservice and an outer port (NodePort) to access it from the outside world (such as the testers or developers laptop).
 
-I assume you have kubernetes running and some environment to deploy to (this can be just minikube running locally). We recommend [minkube 0.27](https://github.com/kubernetes/minikube/releases/tag/v0.27.0) because of its stability. First you should install Kubernetes. We recommend doing that by changing you docker settings and apply them as shown below.
+I assume you have kubernetes running and some environment to deploy to (this can be just minikube running locally). We recommend [minkube 0.27](https://github.com/kubernetes/minikube/releases/tag/v0.27.0) because of its stability. First you should install Kubernetes. We recommend doing that by changing your docker settings and apply them as shown below.
 
 ![image](https://raw.githubusercontent.com/ConnectingApps/ShowOrchestration/master/InstallKubernetes.png)
 
@@ -51,16 +51,16 @@ minikube dashboard
 ```
 Open your kubernetes dashboard (it should look like as shown below). If you do not have minikube installed, the url shall depend on your cloud provider.
 In the "Overview", you can see
-5 Pods (defined in the deployment file)
-1 Replicate Set (defined in the deployment file) to describe the number of pods
-1 Self created service with the outer port 30002 (defined in the service file)
+- 5 Pods (defined in the deployment file)
+- 1 Replicate Set (defined in the deployment file) to describe the number of pods
+- 1 Self created service with the outer port 30002 (defined in the service file)
 
 Open a new tab and with the dashboard url. Replace the port number by 30002 (as defined in the service file).
 
 This should be something like:
 http://192.168.0.111:30002/
 
-You are now running a microservice without depending on a single docker file.
+You are now running a microservice without depending on a single docker container.
 
 ![image](https://raw.githubusercontent.com/ConnectingApps/ShowOrchestration/master/KubernetesOverview.png)
 
